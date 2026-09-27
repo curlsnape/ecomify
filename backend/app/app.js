@@ -14,11 +14,6 @@ app.use(
   }),
 );
 
-app.use((req, res, next) => {
-  console.log("FRONTEND_URL:", process.env.FRONTEND_URL);
-  console.log("Origin:", req.headers.origin);
-  next();
-});
 app.use(express.json());
 app.use(cookieParser());
 
